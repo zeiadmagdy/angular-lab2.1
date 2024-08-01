@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="p-grid">
+        <div *ngFor="let user of users" class="p-col-12 p-md-4">
+            <p-card>
+                <ng-template pTemplate="header">
+                    <img [src]="user.profilePicture" alt="{{ user.username }}" class="profile-picture">
+                </ng-template>
+                <ng-template pTemplate="content">
+                    <i class="fas fa-star" [style.color]="user.isAdmin ? 'green' : 'red'"></i>
+                    <h2>{{ user.username }}</h2>
+                    <p>Email: {{ user.email }}</p>
+                    <p>Phone: {{ user.phone }}</p>
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+</div>
